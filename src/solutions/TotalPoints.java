@@ -21,16 +21,15 @@ public class TotalPoints {
     }
 
     public static int points(String[] games) {
-        String[] temporary = new String[2];
+        String[] temporary;
         int pointsTeam = 0;
-        for (int i = 0; i < games.length; i++) {
-            temporary = games[i].split(":");
+        for (String game : games) {
+            temporary = game.split(":");
 
             int x = Integer.parseInt(temporary[0]);
             int y = Integer.parseInt(temporary[1]);
             if (x > y) {
                 pointsTeam += 3;
-            } else if (x < y) {
             } else if (x == y) {
                 pointsTeam += 1;
             }
