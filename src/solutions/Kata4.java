@@ -43,10 +43,10 @@ public class Kata4 {
     // make Map from String
     public static Map<Integer, String> makeMap(String str) {
         Map<Integer, String> result = new TreeMap<>();
-        String[] temporary = new String[str.length()];
+        String[] temporary;
         temporary = str.split("[-,\\n]");
-        Integer key = 0;
-        String value = null;
+        int key = 0;
+        String value;
 
         for (int i = 0; i < temporary.length; i++) {
             if (i % 2 == 0) {
